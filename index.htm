@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+
+	<style>
+
+		* {
+			box-sizing: border-box;
+			padding: 0;
+			margin: 0;
+		}
+
+		body {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+
+			height: 100vh;
+		}
+
+		h1{
+			text-align: center;
+		}
+
+		section > div > div:first-child {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			margin: 2rem;
+		}
+
+		section > div > div:last-child {
+			display: flex;
+			gap: 10px;
+			justify-content: center;
+			font-size: 1.5rem;
+			width: 300px;
+		}
+
+		section > div .buttons {
+			margin-bottom: 1rem;
+		}
+
+		section > div:first-child {
+			display: flex;
+			justify-content: center;
+			flex-direction: column;
+			align-items: center;
+			object-fit: cover;
+		}
+
+		section > div img {
+			margin-top: 1.5rem;
+			width: 50%;
+			box-shadow: 0px 0px 10px 0px rgb(0 0 0 / 0.3);
+		}
+
+		section > div:last-child {
+			margin-top: 1rem;
+		}
+
+		button {
+			padding: .2rem;
+			cursor: pointer;
+		}
+
+		.show {
+			display: block;
+		}
+			
+		section {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			gap: 10px;
+		}
+
+		iframe {
+			display: none;
+		}
+
+
+		#show-btn {
+			margin-top: 2rem;
+		}
+
+		input#name {
+			padding: .2rem;
+		}
+
+	</style>
+
+	<script src="index.js" defer></script>
+</head>
+<body>
+
+	<section>
+		<button id="show-btn"></button>
+		<iframe class="video" id="video" width="560" height="315" src="https://www.youtube.com/embed/QNtDnC3KuiM?si=LU5HvcrdH8X_NWdR" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="no-referrer" allowfullscreen></iframe>
+	</section>
+
+	<section>
+		<div>
+			<div>
+				<h1></h1>
+				<img src="">
+			</div>
+
+			<div class="buttons">
+				<button id="inc-btn" tabindex="0">Increment:</button>
+				<button id="dec-btn" tabindex="1">Decrement</button>
+				<button id="sub-btn" tabindex="2">Submit</button>
+				<button id="res-btn" tabindex="3">Reset</button>
+			</div>
+			<div>
+				<span>Quantity:</span>
+				<span id="quantity">0</span>
+			</div>
+		</div>
+		<div>
+			<input type="text" name="name" id="name" placeholder="Enter Your Name Here...">
+			<button id="enter-btn">Enter</button>
+		</div>
+	</section>
+</body>
+</html>
